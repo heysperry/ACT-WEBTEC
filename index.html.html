@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>AVENGERS</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+
+ :root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+ {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://img.pikbest.com/wp/202346/white-brick-wall-background-colorful-with-glowing-blue-and-purple-smoke-in-the_9721938.jpg!w700wp');
+  background-repeat: repeat;
+  background-size: 1700px, 500px;
+}
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -10%, 100px);
+}
+</style>
+
+
+</head>
+<body>
+
+    
+
+
+  <div class="card">
+    <div class="wrapper">
+      <img src="https://github.com/heysperry/ACT/blob/main/captain.jpg?raw=true" class="cover-image" />
+    </div>
+    <img src="https://github.com/heysperry/ACT/blob/main/capt.png?raw=true" class="character" />
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5fd7346-eed0-4416-8203-58b0d230afe3/dfeeed3-cdc1d66c-3b37-4a04-b03e-fbf098445ba0.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U1ZmQ3MzQ2LWVlZDAtNDQxNi04MjAzLTU4YjBkMjMwYWZlM1wvZGZlZWVkMy1jZGMxZDY2Yy0zYjM3LTRhMDQtYjAzZS1mYmYwOTg0NDViYTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HWJSyquRDBaBF3EI6bzVMS8SOHeRIZXR4UV09-jEzvI" class="title" />
+  </div>
+
+<div class="card">
+    <div class="wrapper">
+      <img src="https://github.com/heysperry/ACT/blob/main/Ironman.jpg?raw=true" class="cover-image" />
+    </div>
+<img src="https://github.com/heysperry/ACT/blob/main/iron.png?raw=true" class="character" />
+    <img src="https://github.com/heysperry/ACT/blob/main/iron-title.png?raw=true" class="title" />
+  </div>
+
+<div class="card">
+    <div class="wrapper">
+      <img src="https://github.com/heysperry/ACT/blob/main/thor.jpg?raw=true" class="cover-image" />
+    </div>
+    <img src="https://github.com/heysperry/ACT/blob/main/thor.png?raw=true" class="character" />
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/10d7e8b1-9fe1-4c41-aeb7-331f4fb188aa/de2vdfa-10d9dcf6-1981-4d71-b209-733c2b3ce965.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEwZDdlOGIxLTlmZTEtNGM0MS1hZWI3LTMzMWY0ZmIxODhhYVwvZGUydmRmYS0xMGQ5ZGNmNi0xOTgxLTRkNzEtYjIwOS03MzNjMmIzY2U5NjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UEsCk2rvT7QyTvQhM5CbhyslHYxMoPKt6kes-PADQPA" class="title" />
+  </div>
+
+<div class="card">
+    <div class="wrapper">
+      <img src="https://github.com/heysperry/ACT/blob/main/hulk.jpg?raw=true" class="cover-image" />
+    </div>
+    <img src="https://github.com/heysperry/ACT/blob/main/hulkk.png?raw=true" class="character" />
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5fd7346-eed0-4416-8203-58b0d230afe3/dfeee7h-cec3292b-dcd9-4662-aded-ed9abacf40f3.png/v1/fill/w_1280,h_393/the_incredible_hulk_logo_png___disney__variant_by_bats66_dfeee7h-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzkzIiwicGF0aCI6IlwvZlwvZTVmZDczNDYtZWVkMC00NDE2LTgyMDMtNThiMGQyMzBhZmUzXC9kZmVlZTdoLWNlYzMyOTJiLWRjZDktNDY2Mi1hZGVkLWVkOWFiYWNmNDBmMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.co1zRMnGQs7g-eP-z1qNA1fcqpI-XHGs960LzoB31oI" class="title" />
+  </div>
+
+</body>
+</html>
