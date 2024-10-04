@@ -1,85 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Sign-Up and Login Form</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBTEC ACTIVITY 9</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="container">
-		<div class="form-container">
-			<div class="sign-up-form">
-				<h2>Sign-Up Form</h2>
-				<form id="sign-up-form">
-					<label for="fname">First name:</label>
-					<input type="text" id="fname" name="fname"><br><br>
-					<label for="lname">Last name:</label>
-					<input type="text" id="lname" name="lname"><br><br>
-					<label for="bday">Birthdate:</label>
-					<input type="date" id="bday" name="bday"><br><br>
-					<label for="gender">Gender:</label>
-					<select id="gender" name="gender">
-						<option value="male">Male</option>
-						<option value="female">Female</option>
-					</select><br><br>
-					<label for="email">Email Address:</label>
-					<input type="email" id="email" name="email"><br><br>
-					<label for="contact">Contact Number:</label>
-					<input type="tel" id="contact" name="contact"><br><br>
-					<label for="username">Username:</label>
-					<input type="text" id="username" name="username"><br><br>
-					<label for="password">Create Password:</label>
-					<input type="password" id="password" name="password"><br><br>
-					<label for="confirm-password">Confirm Password:</label>
-					<input type="password" id="confirm-password" name="confirm-password"><br><br>
-					<button type="submit">Sign-Up</button>
-				</form>
-			</div>
-			<div class="login-form" style="display: none;">
-				<h2>Login Form</h2>
-				<form id="login-form">
-					<label for="username-login">Username:</label>
-					<input type="text" id="username-login" name="username-login"><br><br>
-					<label for="password-login">Password:</label>
-					<input type="password" id="password-login" name="password-login"><br><br>
-					<button type="submit">Login</button>
-				</form>
-			</div>
-		</div>
-	</div>
+ <div class="header">  
+    <img width="600px" height="200px" src="https://1000logos.net/wp-content/uploads/2019/05/Avengers-Logo-2015.png" class="background" />
+ </div>
+<div class="main-content">
+  <div class="card">
+    <div class="wrapper">
+    <img src="https://github.com/heysperry/ACT/blob/main/captain.jpg?raw=true" class="cover-image" />
+    </div>
+    <img src="https://github.com/heysperry/ACT/blob/main/capt.png?raw=true" class="character" />
+	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5fd7346-eed0-4416-8203-58b0d230afe3/dfeeed3-cdc1d66c-3b37-4a04-b03e-fbf098445ba0.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U1ZmQ3MzQ2LWVlZDAtNDQxNi04MjAzLTU4YjBkMjMwYWZlM1wvZGZlZWVkMy1jZGMxZDY2Yy0zYjM3LTRhMDQtYjAzZS1mYmYwOTg0NDViYTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HWJSyquRDBaBF3EI6bzVMS8SOHeRIZXR4UV09-jEzvI" class="title" />
+  </div>
 
-	<script>
-		const signUpForm = document.getElementById('sign-up-form');
-		const loginForm = document.getElementById('login-form');
-		const signUpButton = signUpForm.querySelector('button[type="submit"]');
-		const loginButton = loginForm.querySelector('button[type="submit"]');
+ <div class="card">
+    <div class="wrapper">
+    <img src="https://github.com/heysperry/ACT/blob/main/Ironman.jpg?raw=true" class="cover-image" />
+    </div>
+	<img src="https://github.com/heysperry/ACT/blob/main/iron.png?raw=true" class="character" />
+    <img src="https://github.com/heysperry/ACT/blob/main/iron-title.png?raw=true" class="title" />
+  </div>
 
-		signUpButton.addEventListener('click', (e) => {
-			e.preventDefault();
-			const username = signUpForm.querySelector('#username').value;
-			const password = signUpForm.querySelector('#password').value;
-			const confirmPassword = signUpForm.querySelector('#confirm-password').value;
+ <div class="card">
+    <div class="wrapper">
+    <img src="https://github.com/heysperry/ACT/blob/main/thor.jpg?raw=true" class="cover-image" />
+    </div>
+    <img src="https://github.com/heysperry/ACT/blob/main/thor.png?raw=true" class="character" />
+	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/10d7e8b1-9fe1-4c41-aeb7-331f4fb188aa/de2vdfa-10d9dcf6-1981-4d71-b209-733c2b3ce965.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEwZDdlOGIxLTlmZTEtNGM0MS1hZWI3LTMzMWY0ZmIxODhhYVwvZGUydmRmYS0xMGQ5ZGNmNi0xOTgxLTRkNzEtYjIwOS03MzNjMmIzY2U5NjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UEsCk2rvT7QyTvQhM5CbhyslHYxMoPKt6kes-PADQPA" class="title" />
+  </div>
 
-			if (password === confirmPassword) {
-				localStorage.setItem('username', username);
-				localStorage.setItem('password', password);
-				signUpForm.style.display = 'none';
-				loginForm.style.display = 'block';
-			} else {
-				alert('Passwords do not match');
-			}
-		});
+ <div class="card">
+    <div class="wrapper">
+    <img src="https://github.com/heysperry/ACT/blob/main/hulk.jpg?raw=true" class="cover-image" />
+    </div>
+    <img src="hulkkkk.png" class="character" />
+	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5fd7346-eed0-4416-8203-58b0d230afe3/dfeee7h-cec3292b-dcd9-4662-aded-ed9abacf40f3.png/v1/fill/w_1280,h_393/the_incredible_hulk_logo_png___disney__variant_by_bats66_dfeee7h-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzkzIiwicGF0aCI6IlwvZlwvZTVmZDczNDYtZWVkMC00NDE2LTgyMDMtNThiMGQyMzBhZmUzXC9kZmVlZTdoLWNlYzMyOTJiLWRjZDktNDY2Mi1hZGVkLWVkOWFiYWNmNDBmMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.co1zRMnGQs7g-eP-z1qNA1fcqpI-XHGs960LzoB31oI" class="title" />
+  </div>
+</div>
+ 
+ <footer>
+    Johann Perry D. Cuizon &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    Section IT502P &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; 
+    ACT-AD Program &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    WEB TECHNOLOGY &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+    Asian College of Technology, College of Computer Studies
+  </footer>
 
-		loginButton.addEventListener('click', (e) => {
-			e.preventDefault();
-			const usernameLogin = loginForm.querySelector('#username-login').value;
-			const passwordLogin = loginForm.querySelector('#password-login').value;
-
-			if (usernameLogin === localStorage.getItem('username') && passwordLogin === localStorage.getItem('password')) {
-				alert('Login successful');
-			} else {
-				alert('Invalid username or password');
-			}
-		});
-	</script>
-</body>
+</body>  
 </html>
